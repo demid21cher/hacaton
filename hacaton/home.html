@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Навчальна платформа</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Забезпечує, що body займає всю висоту вікна */
+        }
+        .header {
+            background-color: #007BFF;
+            color: white;
+            padding: 20px;
+            font-size: 28px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 20px auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .card {
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            text-decoration: none;
+            display: block;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        .card-title {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .card-subtitle {
+            font-size: 16px;
+            font-style: italic;
+        }
+        .footer {
+            background-color: #007BFF;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: auto; /* Футер завжди внизу сторінки */
+            box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">Навчальна платформа "Знання+"</div>
+    
+    <div class="container">
+        <h2>Огляд дисциплін</h2>
+        <div class="grid">
+            <a href="index.html?subject=Математика" class="card">
+                <div class="card-title">Математика</div>
+                <div class="card-subtitle">Кафедра вищої математики</div>
+            </a>
+            <a href="subject.html?subject=Фізика" class="card">
+                <div class="card-title">Фізика</div>
+                <div class="card-subtitle">Кафедра фізики</div>
+            </a>
+            <a href="subject.html?subject=Історія" class="card">
+                <div class="card-title">Історія</div>
+                <div class="card-subtitle">Кафедра історії</div>
+            </a>
+            <a href="subject.html?subject=Біологія" class="card">
+                <div class="card-title">Біологія</div>
+                <div class="card-subtitle">Кафедра біології</div>
+            </a>
+        </div>
+    </div>
+
+    <div class="footer">
+        &copy; 2023 Навчальна платформа "Знання+". Усі права захищені.
+    </div>
+    
+</body>
+</html>
